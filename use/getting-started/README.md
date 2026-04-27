@@ -1,3 +1,7 @@
+---
+description: System requirements, one-click installer, and enabling add-ons for a Sunbird Spark deployment.
+---
+
 # Getting Started
 
 ### Overview

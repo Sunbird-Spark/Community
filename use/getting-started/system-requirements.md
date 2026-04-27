@@ -30,20 +30,20 @@ Sunbird requires a **2-node cluster** to run the base installation.
 
 ***
 
-### Optional Addons
+### Optional Add-ons
 
-Addons are optional features you can install on top of the base Sunbird setup.
+Add-ons are optional features you can install on top of the base Sunbird setup.
 
-| Addon                  | What it adds             |
+| Add-on                 | What it adds             |
 | ---------------------- | ------------------------ |
 | DIAL                   | 1 service + 2 Flink jobs |
 | Discussion Forum       | 3 services               |
 | Video Stream Generator | 1 Flink job              |
 | Obsrv                  | Full Obsrv stack         |
 
-> ⚠️ **Obsrv requires 2 additional nodes.** The Obsrv addon runs heavier workloads that cannot fit on the existing 2-node cluster. Please provision 2 extra nodes before installing the Obsrv addon.
+> ⚠️ **Obsrv requires 2 additional nodes.** The Obsrv add-on runs heavier workloads that cannot fit on the existing 2-node cluster. Please provision 2 extra nodes before installing the Obsrv add-on.
 
-> ✅ All other addons (DIAL, Discussion Forum, Video Stream Generator) run on the same 2-node cluster — no extra nodes needed.
+> ✅ All other add-ons (DIAL, Discussion Forum, Video Stream Generator) run on the same 2-node cluster — no extra nodes needed.
 
 ***
 
@@ -124,7 +124,7 @@ Sunbird requires a **2-node cluster** to run the base installation.
 | Memory   | \~40 Gi    | \~74 Gi    | —        |
 | Disk     | —          | —          | \~219 Gi |
 
-### Optional Addons
+### Optional Add-ons
 
 {% stepper %}
 {% step %}
@@ -140,7 +140,7 @@ Sunbird allows you to turn on <mark style="color:$info;">**extra features like D
 {% endstep %}
 {% endstepper %}
 
-| Addon                  | What it adds             |
+| Add-on                 | What it adds             |
 | ---------------------- | ------------------------ |
 | DIAL                   | 1 service + 2 Flink jobs |
 | Discussion Forum       | 3 services               |
@@ -148,7 +148,7 @@ Sunbird allows you to turn on <mark style="color:$info;">**extra features like D
 | Obsrv                  | Full Obsrv stack         |
 
 {% hint style="info" %}
-<mark style="color:$info;">To install Sunbird Spark addons, you can use the existing 2-node cluster for DIAL, Discussion Forum, and Video Stream Generator, but</mark> <mark style="color:$info;">**you must provision 2 additional nodes (4 total) specifically for the Obsrv addon due to its heavier workload.**</mark>
+<mark style="color:$info;">To install Sunbird Spark add-ons, you can use the existing 2-node cluster for DIAL, Discussion Forum, and Video Stream Generator, but</mark> <mark style="color:$info;">**you must provision 2 additional nodes (4 total) specifically for the Obsrv add-on due to its heavier workload.**</mark>
 {% endhint %}
 
 ***

@@ -14,17 +14,19 @@ Spark is a **Digital Public Good**: free to use, free to customise, and free to 
 
 **What Can You Build with Spark?**
 
-**Example 1 — State school teacher training**
-
+{% tabs %}
+{% tab title="State school teacher training" %}
 A state education department deploys Spark to run mandatory annual training for 500,000 teachers. Teachers complete self-paced courses on their smartphones, take assessments at the end of each module, and receive a digitally verifiable certificate on completion. The state administrator monitors course-by-course completion rates and identifies districts with low engagement.
+{% endtab %}
 
-**Example 2 — Hospital staff induction and compliance**
-
+{% tab title="Hospital staff induction" %}
 A hospital network deploys Spark to onboard new clinical and non-clinical staff across 40 hospitals. Induction courses are mandatory; completion is tracked per department. Staff access content on shared tablets in break rooms or on personal phones via the offline mobile app. Compliance reports are generated monthly from the built-in admin dashboard.
+{% endtab %}
 
-**Example 3 — Corporate upskilling programme**
-
+{% tab title="Corporate upskilling" %}
 An enterprise deploys Spark to deliver a structured data literacy programme to 10,000 employees globally. Employees self-enrol in learning paths, managers view team-level progress reports, and employees who complete the programme receive a shareable, verifiable certificate.
+{% endtab %}
+{% endtabs %}
 
 ***
 

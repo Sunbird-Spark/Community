@@ -22,6 +22,8 @@ Architecture:
 * Learning Service officially deprecated — Assessment APIs moved to inQuiry Assessment Service
 * Node.js runtime upgraded to v22 for middleware services
 
-[Full ED 8.1.0 release notes →](about:blank)
+{% hint style="info" %}
+Full ED 8.1.0 release notes will be linked here once published.
+{% endhint %}
 
 <br>

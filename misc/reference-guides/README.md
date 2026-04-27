@@ -1,3 +1,7 @@
+---
+description: Detailed technical reference for platform engineers — database maps, Flink jobs, telemetry pipeline, and configuration options.
+---
+
 # Reference guides
 
 This section contains detailed technical reference documentation for platform engineers and developers operating a Spark deployment.

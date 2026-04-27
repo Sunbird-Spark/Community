@@ -2,7 +2,7 @@
 
 ### The North Star of Spark
 
-Before the breakdown, the single driving goal is clear: optimising for smaller scales without compromising DPI architectural principles, or on the ability to scale on demand. Spark will still scale for larger user bases if needed. Everything in Spark is in service of cost reduction, simplification, and modernization.
+Spark's single driving goal is to optimise for smaller scales without compromising DPI architectural principles, or the ability to scale on demand. Spark will still scale for larger user bases if needed. Everything in Spark is in service of cost reduction, simplification, and modernisation.
 
 
 

@@ -1,3 +1,7 @@
+---
+description: Design principles, architecture decisions, tech stack, and building blocks that make up Sunbird Spark.
+---
+
 # Tech overview
 
 {% content-ref url="design-principles.md" %}

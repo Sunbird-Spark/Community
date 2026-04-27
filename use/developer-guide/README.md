@@ -1,3 +1,7 @@
+---
+description: Architecture diagrams, local development setup, web portal, mobile app, APIs, and configuration reference for developers building on or extending Spark.
+---
+
 # Developer Guide
 
 {% content-ref url="architecture-component-diagram.md" %}

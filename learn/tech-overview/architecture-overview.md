@@ -1,3 +1,9 @@
+---
+description: >-
+  How Sunbird Spark is structured, why it was re-architected from Sunbird ED,
+  and the key decisions behind service and database consolidation.
+---
+
 # Architecture Overview
 
 Sunbird Spark is a re-architecture of Sunbird ED, designed to reduce infrastructure cost and operational complexity while preserving full backward compatibility. This page explains how the platform is structured and why the key architectural decisions were made.
@@ -16,17 +22,19 @@ Spark addresses all three: services are consolidated, dependencies are current, 
 
 ### Before and after
 
-#### Sunbird ED — v8.1.0
-
+{% tabs %}
+{% tab title="Sunbird ED (v8.1.0)" %}
 <figure><img src="../../.gitbook/assets/unknown (3).png" alt=""><figcaption></figcaption></figure>
 
 **20+ microservices · 3 transactional databases · All features on by default**
+{% endtab %}
 
-#### Sunbird Spark
-
+{% tab title="Sunbird Spark" %}
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 **Fewer than 5 services · 1 database cluster (YugabyteDB) · Add-on architecture**
+{% endtab %}
+{% endtabs %}
 
 ### Service consolidation
 
