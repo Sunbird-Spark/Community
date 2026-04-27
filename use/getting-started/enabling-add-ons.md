@@ -65,7 +65,7 @@ Installation setup guide for all add-ons which follow the same installation patt
 
 {% stepper %}
 {% step %}
-#### Navigate to the addon directory
+#### Navigate to the add-on directory
 
 ```bash
 cd addons/<addon-name>
@@ -92,7 +92,7 @@ helm list -n sunbird
 {% endstep %}
 
 {% step %}
-#### Removing addons
+#### Removing add-ons
 
 ```bash
 cd addons/<addon-name>
@@ -108,9 +108,9 @@ cd addons/<addon-name>
 
 DIAL requires additional steps compared to other add-ons. Unlike the rest, it provisions cloud infrastructure (a storage container) via OpenTofu as part of its setup, and requires a core service to be redeployed afterward to pick up the new configuration.
 
-**Step 1 — Run the DIAL addon script**
+**Step 1 — Run the DIAL add-on script**
 
-Navigate to the DIAL addon directory and run the install script. This provisions the required cloud container via OpenTofu.
+Navigate to the DIAL add-on directory and run the install script. This provisions the required cloud container via OpenTofu.
 
 {% hint style="info" %}
 DIAL requires a infrastructure deployment, uncomment **`provision_resources`** in the **`./script/addon.sh`** file for OpenTofu or infrastructure provisioning.&#x20;
@@ -130,7 +130,7 @@ cd addons/dial
 
 **Step 2 — Enable the DIAL flag in `global-values.yaml` in** [**spark-ed-installer**](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/develop/opentofu/azure/template/global-values.yaml) **repo**
 
-Once the addon is deployed, set the dial dependency flag to inform core services that DIAL is active:
+Once the add-on is deployed, set the dial dependency flag to inform core services that DIAL is active:
 
 ```yaml
 deployed_dial_addon:  &deployed_dial_addon  "true"
@@ -162,7 +162,7 @@ This redeploys `knowledgebb` with the updated DIAL configuration included.
 
 <table><thead><tr><th width="344">Add-on</th><th>What it adds</th></tr></thead><tbody><tr><td><strong>DIAL</strong></td><td>QR code generation and content linking</td></tr><tr><td><strong>Discussion Forum</strong></td><td>Community discussion threads and group management</td></tr><tr><td><strong>Video Stream Generator</strong></td><td>Video transcoding and HLS stream generation</td></tr><tr><td><em>Obsrv</em></td><td><em>Obsrv is an open-source data telemetry, processing, and analytics platform designed for high-scale reliability.</em> </td></tr></tbody></table>
 
-> **Note: Please go through the Obsrv addon** [**README**](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/develop/addons/obsrv/README.md) **file for setup**
+> **Note: Please go through the Obsrv add-on** [**README**](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/develop/addons/obsrv/README.md) **file for setup**
 
 ***
 

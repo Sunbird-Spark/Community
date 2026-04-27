@@ -1,12 +1,12 @@
 # Spark Infra, Deployment & Platform Config
 
-This section is for DevOps engineers ready to deploy Sunbird Spark on their own infrastructure. It covers everything from provisioning  cluster to getting the platform up and running.
+This section is for DevOps engineers ready to deploy Sunbird Spark on their own infrastructure. It covers everything from provisioning a cluster to getting the platform up and running.
 
 ***
 
 ### How Spark works
 
-&#x20;Sunbird Spark is a three-part process.
+Sunbird Spark is a three-part process.
 
 **1. Provision your infrastructure**
 

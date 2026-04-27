@@ -32,6 +32,6 @@ Flink jobs run in two Kubernetes namespaces:
 
 #### Jobs removed from Spark
 
-The following jobs from Sunbird ED have been removed. See the [ED → Spark Migration Guide](about:blank) for the full list and replacements.
+The following jobs from Sunbird ED have been removed. See the [ED → Spark Migration Guide](../../use/ed-greater-than-spark-migration/flink-jobs-removed-in-spark.md) for the full list and replacements.
 
 <br>
