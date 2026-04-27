@@ -1,17 +1,19 @@
 # Sunbird Spark documentation
 
-This document serves as the official guide for Sunbird Spark, structured to provide targeted guidance based on your specific role and objectives. You will find platform overviews, quick-start guides, developer reference manuals, and migration instructions for Sunbird ED adopters.
+<p align="center">The official guide for Sunbird Spark — a free, open-source learning management platform for governments, enterprises, and non-profits. Deploy it, extend it, or migrate to it from Sunbird ED.</p>
 
-**Version:** Spark v1.0 (SB 9.0) · **Last updated:** March 2026\
-**Replaces:** Sunbird ED documentation ([archived — see Misc › Archived](misc/templates/archived.md))
+<p align="center"><strong>Version:</strong> Spark v1.0 (SB 9.0) · <strong>Last updated:</strong> March 2026</p>
 
+<p align="center">
 <a href="quick-start/5-minute-overview.md" class="button primary">Get Started →</a>
+<a href="https://github.com/Sunbird-Spark" class="button secondary">View on GitHub →</a>
+</p>
 
 ***
 
-### Choose your path
+<h2 align="center">Choose your path</h2>
 
-<table data-view="cards">
+<table data-card-size="large" data-view="cards">
 <thead>
 <tr>
 <th></th>
@@ -55,8 +57,6 @@ This document serves as the official guide for Sunbird Spark, structured to prov
 Sunbird Spark is the next iteration of Sunbird ED, built to be more streamlined, easier to set up, and more cost-effective.
 
 A key shift is its flexible, modular approach — features that were previously always enabled are now optional, allowing you to use only what you need. This helps reduce complexity while improving efficiency.
-
-A detailed comparison between ED and Spark is provided in the section below.
 
 {% content-ref url="learn/ed-vs-spark/" %}
 [ed-vs-spark](learn/ed-vs-spark/)
