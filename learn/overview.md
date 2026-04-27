@@ -28,7 +28,7 @@ It is the next evolution of the Sunbird building block ED — redesigned to be l
 <div data-full-width="true"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
 
 **Digital Infrastructure for Knowledge Sharing**\
-&#xNAN;_&#x42;y NCERT, Ministry of Education, India_
+_By NCERT, Ministry of Education, India_
 
 India's national school education platform. Deployed across all 36 states and Union Territories, impacting nearly every student and teacher in the country. Processes 2 billion+ telemetry events per day at peak.
 
@@ -39,7 +39,7 @@ India's national school education platform. Deployed across all 36 states and Un
 <p align="center"><img src="../.gitbook/assets/image (1).png" alt="" data-size="original"></p>
 
 **Integrated Government Online Training**\
-&#xNAN;_&#x42;y the Government of India_
+_By the Government of India_
 
 India's civil service capacity building platform, enabling structured professional development for government employees across all departments and levels of administration.
 

@@ -44,7 +44,7 @@ Complete all lessons in a course. Once the completion threshold is met:
 * A certificate is automatically generated
 * The certificate appears in your Profile page.
 * You can download it as a PDF
-* You can share your certificate with employers or institutions for verification using QR (Already present in the downloaded certificate)
+* You can share your certificate with employers or institutions for verification — a QR code for verification is embedded in the downloaded PDF
 
 ***
 
