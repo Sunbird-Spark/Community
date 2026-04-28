@@ -1,14 +1,14 @@
 # 5-minute overview
 
-_For product managers, programme directors, and organisational decision-makers evaluating Sunbird Spark._
+<p align="center"><em>For product managers, programme directors, and organisational decision-makers evaluating Sunbird Spark.</em></p>
 
 ***
 
-**What is Sunbird Spark?**
+<h2 align="center">What is Sunbird Spark?</h2>
 
-Sunbird Spark is a free, open-source learning management platform. Any organisation — a government ministry, a hospital network, a corporate HR team, a non-profit — can deploy it to run structured learning and capacity-building programmes. It supports course creation, learner enrolment, progress tracking, and verifiable certificate issuance, with mobile and web access for learners and a full administrative console for operators.
+<p align="center">A free, open-source learning management platform. Any organisation — a government ministry, a hospital network, a corporate HR team, a non-profit — can deploy it to run structured learning and capacity-building programmes. It supports course creation, learner enrolment, progress tracking, and verifiable certificate issuance, with mobile and web access for learners and a full administrative console for operators.</p>
 
-Spark is a **Digital Public Good**: free to use, free to customise, and free to deploy.
+<p align="center"><strong>Spark is a Digital Public Good: free to use, free to customise, and free to deploy.</strong></p>
 
 ***
 
@@ -73,3 +73,7 @@ For larger deployments, the architecture scales horizontally — additional node
 
 ***
 
+<p align="center">
+<a href="../quick-start/spark-infra-deployment-and-platform-config.md" class="button primary">Deploy Spark →</a>
+<a href="../use/getting-started/system-requirements.md" class="button secondary">Check Requirements →</a>
+</p>

@@ -1,23 +1,54 @@
 # Sunbird Spark documentation
 
-This document serves as the official guide for Sunbird Spark, structured to provide targeted guidance based on your specific role and objectives.&#x20;
+<p align="center">The official guide for Sunbird Spark — a free, open-source learning management platform for governments, enterprises, and non-profits. Deploy it, extend it, or migrate to it from Sunbird ED.</p>
 
-Within these sections, you will find comprehensive platform overviews, step-by-step quick-start and deployment guides, in-depth developer reference manuals, and specific instructions for migrating from previous Sunbird ED versions. You can navigate directly to the section that best aligns with your technical background and current project requirement
+<p align="center"><strong>Version:</strong> Spark v1.0 (SB 9.0) · <strong>Last updated:</strong> March 2026</p>
 
-**Version:** Spark v1.0 (SB 9.0) · **Last updated:** March 2026\
-**Replaces:** Sunbird ED documentation ([archived — see Misc › Archived)](misc/templates/archived.md)
+<p align="center">
+<a href="quick-start/5-minute-overview.md" class="button primary">Get Started →</a>
+<a href="https://github.com/Sunbird-Spark" class="button secondary">View on GitHub →</a>
+</p>
 
 ***
 
-### **How to use these docs**
+<h2 align="center">Choose your path</h2>
 
-| I am a…                                       | Start here                                                                                          |
-| --------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| Product or programme manager evaluating Spark | [Quick Start › 5-Minute Overview](quick-start/5-minute-overview.md)                                 |
-| Technical architect assessing the platform    | [Quick Start › Platform in 30 Minutes](quick-start/platform-in-30-minutes.md)                       |
-| DevOps engineer ready to deploy               | [Quick Start › Deployment in 60 Minutes](quick-start/spark-infra-deployment-and-platform-config.md) |
-| Existing Sunbird ED adopter                   | [Use › ED → Spark Migration Guide](use/ed-greater-than-spark-migration/)                            |
-| Developer building on or extending Spark      | [Use › Developer Guide](use/developer-guide/)                                                       |
+<table data-card-size="large" data-view="cards">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th data-hidden data-card-target data-type="content-ref"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>👩‍💼 <strong>Product / programme manager</strong></td>
+<td>Evaluate Spark for your organisation in 5 minutes</td>
+<td><a href="quick-start/5-minute-overview.md">5-minute-overview.md</a></td>
+</tr>
+<tr>
+<td>🏗️ <strong>Technical architect</strong></td>
+<td>Understand the platform architecture in 30 minutes</td>
+<td><a href="quick-start/platform-in-30-minutes.md">platform-in-30-minutes.md</a></td>
+</tr>
+<tr>
+<td>⚙️ <strong>DevOps engineer</strong></td>
+<td>Deploy Spark on your infrastructure</td>
+<td><a href="quick-start/spark-infra-deployment-and-platform-config.md">spark-infra-deployment-and-platform-config.md</a></td>
+</tr>
+<tr>
+<td>🔄 <strong>Migrating from Sunbird ED</strong></td>
+<td>Step-by-step guide from ED 8.1.0 to Spark</td>
+<td><a href="use/ed-greater-than-spark-migration/README.md">README.md</a></td>
+</tr>
+<tr>
+<td>👨‍💻 <strong>Developer</strong></td>
+<td>Build on or extend Spark</td>
+<td><a href="use/developer-guide/README.md">README.md</a></td>
+</tr>
+</tbody>
+</table>
 
 ***
 
@@ -25,9 +56,7 @@ Within these sections, you will find comprehensive platform overviews, step-by-s
 
 Sunbird Spark is the next iteration of Sunbird ED, built to be more streamlined, easier to set up, and more cost-effective.
 
-A key shift is its flexible, modular approach—features that were previously always enabled are now optional, allowing you to use only what you need. This helps reduce complexity while improving efficiency.
-
-A detailed comparison between ED and Spark is provided in the section below.
+A key shift is its flexible, modular approach — features that were previously always enabled are now optional, allowing you to use only what you need. This helps reduce complexity while improving efficiency.
 
 {% content-ref url="learn/ed-vs-spark/" %}
 [ed-vs-spark](learn/ed-vs-spark/)

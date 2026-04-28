@@ -1,24 +1,53 @@
 # Contribute to Sunbird Spark
 
-Sunbird Spark is a community-maintained open-source project. Contributions in any form are welcome — code, documentation, testing, design, and community engagement are all equally valued.
+<p align="center">Sunbird Spark is a community-maintained open-source project. Contributions in any form are welcome — code, documentation, testing, design, and community engagement are all equally valued.</p>
 
 ### Contribution areas
 
-| Area                | How to contribute                                                                 |
-| ------------------- | --------------------------------------------------------------------------------- |
-| Bug reports         | File an issue on the relevant GitHub repository                                   |
-| Feature proposals   | Start a discussion in the community forum, then file an issue after alignment     |
-| Code — bug fixes    | Fork the repository, fix the bug, submit a PR                                     |
-| Code — new features | Align with the community first (discussion forum), then implement and submit a PR |
-| Documentation       | Edit any page using the "Edit on GitHub" link at the bottom of each page          |
-| Testing             | Join the release testing process — contact the community QA team                  |
-| Translation / I18N  | Contribute language files via the I18N repository                                 |
+<table data-card-size="large" data-view="cards">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🐛 <strong>Bug reports</strong></td>
+<td>File an issue on the relevant GitHub repository</td>
+</tr>
+<tr>
+<td>💡 <strong>Feature proposals</strong></td>
+<td>Start a discussion in the community forum, then file an issue after alignment</td>
+</tr>
+<tr>
+<td>🔧 <strong>Code — bug fixes</strong></td>
+<td>Fork the repository, fix the bug, submit a PR</td>
+</tr>
+<tr>
+<td>🚀 <strong>Code — new features</strong></td>
+<td>Align with the community first (discussion forum), then implement and submit a PR</td>
+</tr>
+<tr>
+<td>📝 <strong>Documentation</strong></td>
+<td>Edit any page using the "Edit on GitHub" link at the bottom of each page</td>
+</tr>
+<tr>
+<td>🧪 <strong>Testing</strong></td>
+<td>Join the release testing process — contact the community QA team</td>
+</tr>
+<tr>
+<td>🌍 <strong>Translation / I18N</strong></td>
+<td>Contribute language files via the I18N repository</td>
+</tr>
+</tbody>
+</table>
 
 ### First-time contributor guide
 
 **1. Pick a good first issue**
 
-&#x20;  Look for issues labelled good first issue or help wanted in the GitHub repositories:
+Look for issues labelled `good first issue` or `help wanted` in the GitHub repositories:
 
 * [SunbirdEd-portal →](https://github.com/Sunbird-Spark/sunbird-spark-portal.git)
 * [knowledge-platform (knowlg-service) →](https://github.com/project-sunbird/knowledge-platform/issues)
