@@ -16,6 +16,7 @@
 | Play Framework | 3.0.5   | Core microservices (Scala)                |
 | Apache Pekko   | 1.0.3   | Actor model for high-concurrency services |
 | Scala          | 2.13.14 | Language for Play/Pekko services          |
+| Java           | 11      | Language for Play/Pekko services          |
 
 {% hint style="info" %}
 **Akka → Pekko:** Spark migrates from Akka 2.5 to Apache Pekko 1.0.3. Pekko is a fully open-source fork of Akka with an identical API — no code changes are required in services that used Akka 2.5. This removes the Akka Business Source Licence dependency.
