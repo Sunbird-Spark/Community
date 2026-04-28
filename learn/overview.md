@@ -6,7 +6,7 @@ coverY: 0
 
 ### **What is Sunbird Spark?**
 
-<figure><img src="../.gitbook/assets/Sunbird Spark logo (1).svg" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Sunbird Spark logo.svg" alt="" width="188"><figcaption></figcaption></figure>
 
 Sunbird Spark is open source, free-to-use solution infrastructure that can be used for learning, education and skilling use cases — a Digital Public Good (DPG) that any organisation can adopt, configure, and deploy to run learning, skilling and capacity building programmes at scale.
 
@@ -19,7 +19,7 @@ Sunbird Spark is **domain-agnostic**. The same platform works equally well for:
 * Agricultural extension programmes
 * Any domain where structured learning and capacity building is a primary need
 
-It is the next evolution of the Sunbird building block ED — redesigned to be leaner, faster to deploy, and more cost-effective, without compromising on its ability to scale when needed. The same core architecture that powers DIKSHA — India's national school education platform serving 260 million+ users — now packages into an infrastructure footprint that a mid-size organisation can run for approximately **$800 per month for 100,000 users**.
+It is the next evolution of the building block [Sunbird ED](https://ed.sunbird.org/) — redesigned to be leaner, faster to deploy, and more cost-effective, without compromising on its ability to scale when needed. The same core architecture that powers DIKSHA — India's national school education platform serving 260 million+ users — now packages into an infrastructure footprint that a mid-size organisation can run for approximately **$800 per month for 100,000 users**.
 
 {% hint style="info" %}
 **Open source and free:** Sunbird Spark is licensed as a Digital Public Good. The platform, all source code, and all deployment tooling are free to use, adopt, and customise. There is no licence fee.
@@ -34,7 +34,7 @@ It is the next evolution of the Sunbird building block ED — redesigned to be l
 <div data-full-width="true"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
 
 **Digital Infrastructure for Knowledge Sharing**\
-&#xNAN;_&#x42;y NCERT, Ministry of Education, India_
+\&#xNAN;_By NCERT, Ministry of Education, India_
 
 India's national school education platform. Deployed across all 36 states and Union Territories, impacting nearly every student and teacher in the country. Processes 2 billion+ telemetry events per day at peak.
 
@@ -45,7 +45,7 @@ India's national school education platform. Deployed across all 36 states and Un
 <div align="center"><img src="../.gitbook/assets/image (1).png" alt=""></div>
 
 **Integrated Government Online Training**\
-&#xNAN;_&#x42;y the Government of India_
+\&#xNAN;_By the Government of India_
 
 India's civil service capacity building platform, enabling structured professional development for government employees across all departments and levels of administration.
 
