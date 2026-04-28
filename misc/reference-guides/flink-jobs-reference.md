@@ -15,7 +15,7 @@ Flink jobs run in two Kubernetes namespaces:
 {% tab title="kp-flink namespace (knowledge platform)" %}
 | publish-pipeline      | Content publish API               | Processes content after it is submitted for publish. Generates ECAR packages (if enabled), processes media, and marks content as Live. Also handles QuestionSet publish — content and QuestionSet publish are merged into a single job in Spark. |
 | --------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| search-indexer        | learning.graph.events Kafka topic | Syncs content metadata changes from Neo4j to Elasticsearch.                                                                                                                                                                                      |
+| search-indexer        | learning.graph.events Kafka topic | Syncs content metadata changes from JanusGraph to Elasticsearch.                                                                                                                                                                                 |
 | audit-event-processor | Content lifecycle events          | Processes content audit events for governance tracking.                                                                                                                                                                                          |
 {% endtab %}
 

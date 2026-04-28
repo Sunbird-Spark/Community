@@ -63,9 +63,9 @@ A unified platform component that integrates core learning functionalities, user
 #### **What's included:**
 
 * **Lern Service (Merged)** — A single service combining all functionalities below
-* **LMS Service** — Learning Management System capabilities
-* **UserOrg Service** — User and Organization management
-* **Notification Service** — System notifications and alerts
+  * **LMS Service** — Learning Management System capabilities
+  * **UserOrg Service** — User and Organization management
+  * **Notification Service** — System notifications and alerts
 
 **Repository:** [https://github.com/Sunbird-Lern/lern-service](https://github.com/Sunbird-Lern/lern-service)
 

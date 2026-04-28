@@ -7,7 +7,7 @@ Spark uses multiple specialised databases, each chosen for the characteristics o
 **Primary transactional database**
 
 {% hint style="success" %}
-New in Spark: YugabyteDB replaces both Cassandra and PostgreSQL from Sunbird ED. It is CQL-compatible (Cassandra Query Language) and YSQL-compatible (PostgreSQL syntax), allowing the same database cluster to serve both use cases.&#x20;
+New in Spark: YugabyteDB replaces both Cassandra and PostgreSQL from Sunbird ED. It is CQL-compatible (Cassandra Query Language) and YSQL-compatible (PostgreSQL syntax), allowing the same database cluster to serve both use cases.
 {% endhint %}
 
 YugabyteDB stores all transactional data across all building blocks:
@@ -90,17 +90,17 @@ Kafka is the backbone of Spark's asynchronous event-driven architecture. It deco
 
 **Key Kafka topics:**
 
-| Topic                     | Producer                         | Consumer                        | Purpose                                        |
-| ------------------------- | -------------------------------- | ------------------------------- | ---------------------------------------------- |
-| telemetry.raw             | Portal, mobile app, desktop app  | Flink telemetry pipeline        | Raw telemetry events from learner interactions |
-| learning.graph.events     | Logstash (from Neo4j change log) | Flink search-indexer            | Content change events for Elasticsearch sync   |
-| coursebatch.job.request   | lern-service                     | Activity aggregator             | Course progress update events                  |
-| issue.certificate.request | Activity aggregator              | Certificate generator Flink job | Certificate issuance trigger events            |
-| telemetry.druid           | Flink telemetry pipeline         | Druid (Obsrv add-on)            | Processed telemetry events for OLAP ingestion  |
+| Topic                     | Producer                              | Consumer                        | Purpose                                        |
+| ------------------------- | ------------------------------------- | ------------------------------- | ---------------------------------------------- |
+| telemetry.raw             | Portal, mobile app, desktop app       | Flink telemetry pipeline        | Raw telemetry events from learner interactions |
+| learning.graph.events     | Logstash (from JanusGraph change log) | Flink search-indexer            | Content change events for Elasticsearch sync   |
+| coursebatch.job.request   | lern-service                          | Activity aggregator             | Course progress update events                  |
+| issue.certificate.request | Activity aggregator                   | Certificate generator Flink job | Certificate issuance trigger events            |
+| telemetry.druid           | Flink telemetry pipeline              | Druid (Obsrv add-on)            | Processed telemetry events for OLAP ingestion  |
 {% endtab %}
 
 {% tab title="Druid" %}
-#### OLAP analytics (Obsrv add-on)
+**OLAP analytics (Obsrv add-on)**
 
 Druid stores processed, denormalised telemetry data for fast analytical queries. It is only active when the Obsrv add-on is enabled.
 
