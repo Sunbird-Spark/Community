@@ -1,6 +1,12 @@
+---
+coverY: 0
+---
+
 # Overview
 
 ### **What is Sunbird Spark?**
+
+<figure><img src="../.gitbook/assets/Sunbird Spark logo (1).svg" alt="" width="188"><figcaption></figcaption></figure>
 
 Sunbird Spark is open source, free-to-use solution infrastructure that can be used for learning, education and skilling use cases — a Digital Public Good (DPG) that any organisation can adopt, configure, and deploy to run learning, skilling and capacity building programmes at scale.
 
@@ -28,7 +34,7 @@ It is the next evolution of the Sunbird building block ED — redesigned to be l
 <div data-full-width="true"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
 
 **Digital Infrastructure for Knowledge Sharing**\
-_By NCERT, Ministry of Education, India_
+&#xNAN;_&#x42;y NCERT, Ministry of Education, India_
 
 India's national school education platform. Deployed across all 36 states and Union Territories, impacting nearly every student and teacher in the country. Processes 2 billion+ telemetry events per day at peak.
 
@@ -36,10 +42,10 @@ India's national school education platform. Deployed across all 36 states and Un
 {% endtab %}
 
 {% tab title="iGOT Karmayogi" %}
-<p align="center"><img src="../.gitbook/assets/image (1).png" alt="" data-size="original"></p>
+<div align="center"><img src="../.gitbook/assets/image (1).png" alt=""></div>
 
 **Integrated Government Online Training**\
-_By the Government of India_
+&#xNAN;_&#x42;y the Government of India_
 
 India's civil service capacity building platform, enabling structured professional development for government employees across all departments and levels of administration.
 
@@ -48,7 +54,7 @@ India's civil service capacity building platform, enabling structured profession
 
 {% tab title="Lex by Infosys" %}
 **Enterprise Learning Experience Platform**\
-&#xNAN;_&#x42;y Infosys_
+\&#xNAN;_By Infosys_
 
 A cloud-first, mobile-first enterprise L\&D platform built on the Sunbird building blocks. Delivers professional development to Infosys's global workforce — accessible anytime, on any device.
 {% endtab %}

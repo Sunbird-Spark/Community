@@ -24,7 +24,7 @@ Spark addresses all three: services are consolidated, dependencies are current, 
 
 {% tabs %}
 {% tab title="Sunbird ED (v8.1.0)" %}
-<figure><img src="../../.gitbook/assets/unknown (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/unknown.png" alt=""><figcaption></figcaption></figure>
 
 **20+ microservices · 3 transactional databases · All features on by default**
 {% endtab %}

@@ -45,7 +45,7 @@ Make sure the following are in place before starting:
 
 ### Architecture Overview
 
-<figure><img src="../../.gitbook/assets/spark-installer (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/spark-installer.png" alt=""><figcaption></figcaption></figure>
 
 ### Installation Methods
 
@@ -91,13 +91,13 @@ sunbird-spark-installer/
 
 Copy the below files into the private repository created:
 
-* &#x20;[workflows/](https://github.com/Sunbird-Spark/sunbird-spark-installer/tree/develop/private-repo-setup/.github/workflows)  - workflows, infra, deploy and platform creation
-* &#x20;[scripts/](https://github.com/Sunbird-Spark/sunbird-spark-installer/tree/develop/private-repo-setup/scripts)  - azure authentication and client ID creation
+* [workflows/](https://github.com/Sunbird-Spark/sunbird-spark-installer/tree/develop/private-repo-setup/.github/workflows) - workflows, infra, deploy and platform creation
+* [scripts/](https://github.com/Sunbird-Spark/sunbird-spark-installer/tree/develop/private-repo-setup/scripts) - azure authentication and client ID creation
 
 ***
 
 * **`sunbird-spark-platform.yaml`** — The file provisions, deploys and configures spark in **\~1hr 25min**.
-* **`sunbird-spark-addons.yaml`** — (OPTIONAL)  deploys and configures the additional building blocks in spark.
+* **`sunbird-spark-addons.yaml`** — (OPTIONAL) deploys and configures the additional building blocks in spark.
 * **`global-values.yaml`** — contains your environment name, cloud subscription details, domain, credentials, and all platform settings. Modify this file from the repo and fill in your values.
 
 Encrypt `global-values.yaml` using Ansible Vault before committing:
@@ -264,8 +264,6 @@ The script provisions infrastructure, deploys all Sunbird services, and configur
 
 {% tabs %}
 {% tab title="Google Cloud" %}
-
-
 **Required tools and permissions**
 
 1. Google Cloud CLI ([https://cloud.google.com/sdk/docs/install](https://cloud.google.com/sdk/docs/install))
@@ -275,7 +273,7 @@ The script provisions infrastructure, deploys all Sunbird services, and configur
 
 * `~/.config/rclone/rclone.conf`
 
-#### Authentication
+**Authentication**
 
 Post installation of the CLI tool and providing necessary permissions, use the following commands to login to GCP via CLI, Refer [README](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/develop/opentofu/gcp/README.md)
 
@@ -283,7 +281,7 @@ Post installation of the CLI tool and providing necessary permissions, use the f
 gcloud auth login
 ```
 
-#### **GCP Infra Setup**
+**GCP Infra Setup**
 
 Post login, update the `opentofu/gcp/<env>/global-values.yaml` file with the variables as per your environment:
 
@@ -328,7 +326,7 @@ global:
 {% endtab %}
 
 {% tab title="AWS" %}
-### **Coming Soon**
+#### **Coming Soon**
 {% endtab %}
 {% endtabs %}
 
