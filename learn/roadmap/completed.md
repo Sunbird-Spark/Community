@@ -2,7 +2,7 @@
 
 > **Note:** Further simplification in progress.
 
-### Completed — January, February & March 2026
+### Completed —&#x20;
 
 **Cost Efficiency and Simplification**
 
@@ -57,13 +57,12 @@
 * **Offline Learning — Android**\
   Users can now **download and learn without an internet connection** on the Android mobile app.
 * **Internationalisation (I18N) & Multilingual Support**\
-  Full **multilingual support** rolled out across the platform for global accessibility.
+  Full **multilingual support** rolled out across the platform for global accessibility, now supporting **English, Français, Português, and العربية**.
 * **Instrumentation & Telemetry**\
   Usage tracking and telemetry added to the **new portal and mobile app** for better insights.<br>
 
 {% hint style="info" %}
-&#x20;All changes are backwards compatible. Refer to the migration guide for upgrade steps.&#x20;
+All changes are backwards compatible. Refer to the migration guide for upgrade steps.
 {% endhint %}
 
 ***
-

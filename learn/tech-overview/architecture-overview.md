@@ -23,16 +23,18 @@ Spark addresses all three: services are consolidated, dependencies are current, 
 ### Before and after
 
 {% tabs %}
-{% tab title="Sunbird ED (v8.1.0)" %}
-<figure><img src="../../.gitbook/assets/unknown.png" alt=""><figcaption></figcaption></figure>
-
-**20+ microservices · 3 transactional databases · All features on by default**
-{% endtab %}
-
 {% tab title="Sunbird Spark" %}
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 **Fewer than 5 services · 1 database cluster (YugabyteDB) · Add-on architecture**
+{% endtab %}
+
+{% tab title="Sunbird ED (v8.1.0)" %}
+**20+ microservices · 3 transactional databases · All features on by default**
+
+<figure><img src="../../.gitbook/assets/unknown.png" alt=""><figcaption></figcaption></figure>
+
+
 {% endtab %}
 {% endtabs %}
 

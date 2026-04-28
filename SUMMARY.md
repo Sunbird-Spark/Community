@@ -34,7 +34,7 @@
   * [Completed](learn/roadmap/completed.md)
   * [Upcoming](learn/roadmap/upcoming.md)
 * [Ed Vs Spark](learn/ed-vs-spark/README.md)
-  * [What is changing](learn/ed-vs-spark/what-is-changing.md)
+  * [What is changing?](learn/ed-vs-spark/what-is-changing.md)
   * [Summary](learn/ed-vs-spark/summary.md)
 
 ## QUICK START
@@ -53,7 +53,7 @@
 * [Developer Guide](use/developer-guide/README.md)
   * [Architecture - Component Diagram](use/developer-guide/architecture-component-diagram.md)
   * [Local Development Guide](use/developer-guide/local-development-guide.md)
-  * [Web Portal ](use/developer-guide/web-portal.md)
+  * [Web Portal](use/developer-guide/web-portal.md)
   * [Sunbird Spark Mobile App](use/developer-guide/sunbird-spark-mobile-app.md)
   * [APIs](use/developer-guide/apis.md)
   * [Configuration Guide](use/developer-guide/configuration-guide.md)

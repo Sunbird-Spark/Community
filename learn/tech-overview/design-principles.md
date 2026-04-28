@@ -10,7 +10,7 @@ icon: compass
 
 {% stepper %}
 {% step %}
-#### Microservices thinking
+**Microservices thinking**
 
 Spark is not a pre-packaged monolithic application. It is a set of generalised microservices — "Lego blocks" — that can be composed into many different solutions.
 
@@ -20,7 +20,7 @@ The reference implementation — the Spark portal and mobile app — is one way 
 {% endstep %}
 
 {% step %}
-#### Unbundling for diversity
+**Unbundling for diversity**
 
 Spark exposes hundreds of APIs covering content creation, collection management, user management, enrolment, progress tracking, certificate issuance, search, telemetry, and more. Each API is designed to be general-purpose — not tied to a specific domain or workflow.
 
@@ -30,7 +30,7 @@ This unbundling means adopters can reimagine solutions using Spark's building bl
 {% endstep %}
 
 {% step %}
-#### Loose coupling for evolution
+**Loose coupling for evolution**
 
 Spark's building blocks are not tightly dependent on each other. The Knowlg building block (content management) can be deployed and used without the Lern building block (user management and enrolment), and vice versa.
 
@@ -43,7 +43,7 @@ This decoupling means:
 {% endstep %}
 
 {% step %}
-#### Observability through emit, not extract
+**Observability through emit, not extract**
 
 Every Spark microservice is built to **emit** telemetry as a first-class design concern — not as an afterthought. Every user interaction, every API call, and every system event generates a structured telemetry event that flows through the telemetry pipeline automatically.
 
@@ -53,11 +53,11 @@ This is contrasted with "extract" architectures, where data is pulled out of app
 {% endstep %}
 
 {% step %}
-#### Lean by default, scale on demand
+**Lean by default, scale on demand**
 
 Spark ships with the minimum viable set of services running. Features that are not universally needed — the full analytics pipeline, discussion forums, QR code infrastructure, project and observation management — are disabled by default and can be enabled as add-ons.
 
-A fresh Spark installation runs approximately 60% fewer services than Sunbird ED 8.x. This dramatically reduces both the infrastructure cost (target: \~$600/month for 100k users / 10k DAU) and operational complexity for the adopter.
+A fresh Spark installation runs approximately 60% fewer services than Sunbird ED 8.x. This dramatically reduces both the infrastructure cost (target: \~$800/month for 100k users / 10k DAU) and operational complexity for the adopter.
 
 When an adopter needs to scale — or when they need a specific add-on capability — those services are available and have been proven at population scale (DIKSHA: 260M users, 2B+ events/day). The architecture does not need to be redesigned to scale; it needs more infrastructure.
 {% endstep %}
