@@ -1,5 +1,9 @@
 # Sunbird Spark releases
 
+{% content-ref url="sunbird-spark-v1.0.1.md" %}
+[sunbird-spark-v1.0.1.md](sunbird-spark-v1.0.1.md)
+{% endcontent-ref %}
+
 {% content-ref url="sunbird-spark-v1.0-sb-9.0.md" %}
 [sunbird-spark-v1.0-sb-9.0.md](sunbird-spark-v1.0-sb-9.0.md)
 {% endcontent-ref %}
