@@ -22,7 +22,7 @@ This page explains how content created in Spark becomes discoverable via search.
          │
          ▼
 5. Flink search-indexer job consumes the topic
-   Creates or updates the document in Elasticsearch
+   Creates or updates the document in OpenSearch
    (compositesearch index)
          │
          ▼
@@ -37,15 +37,15 @@ The search indexer's behaviour is controlled by its configuration file. \
 \
 **Key settings:**
 
-* **nested.fields** — defines which metadata fields are stored as Elasticsearch nested objects (affects how they can be queried)
-* **restrict.objectTypes** — object types listed here are excluded from the Elasticsearch index. By default, internal node types (License, Framework, Channel) are excluded — only content visible to learners is indexed.
+* **nested.fields** — defines which metadata fields are stored as OpenSearch nested objects (affects how they can be queried)
+* **restrict.objectTypes** — object types listed here are excluded from the OpenSearch index. By default, internal node types (License, Framework, Channel) are excluded — only content visible to learners is indexed.
 
 #### Re-indexing
 
-If the Elasticsearch index becomes out of sync with Janus Graph (e.g., after an index rebuild or a Flink job failure), a full re-index can be triggered:
+If the OpenSearch index becomes out of sync with Janus Graph (e.g., after an index rebuild or a Flink job failure), a full re-index can be triggered:
 
 ```
-# Trigger a full Janus Graph  → Elasticsearch sync
+# Trigger a full Janus Graph  → OpenSearch sync
 kubectl exec -it <knowlg-service-pod> -n default -- \
 curl -X POST http://localhost:9000/v1/index/sync
 ```

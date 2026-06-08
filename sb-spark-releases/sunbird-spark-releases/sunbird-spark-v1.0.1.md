@@ -12,14 +12,14 @@ icon: bolt
 **Installer tag:** [`spark-v1.0.1`](https://github.com/Sunbird-Spark/sunbird-spark-installer/releases/tag/spark-v1.0.1)
 
 {% hint style="success" %}
-v1.0.1 is a drop-in upgrade from v1.0.0. No data migration, no API breakage, no mandatory configuration changes.
+v1.0.1 is a drop-in upgrade from v1.0.0. No API breakage, no mandatory configuration changes. The search index migration (Elasticsearch → OpenSearch) and Kubernetes version pin are handled automatically by the installer.
 {% endhint %}
 
 ## What's in this release
 
 | Capability | What it does for you |
 | ---------- | -------------------- |
-| **Smarter search** | Learners find the right content even when they don't know the exact title |
+| **Smarter search** _(OpenSearch replaces Elasticsearch)_ | Learners find the right content even when they don't know the exact title. Search index is migrated automatically by the installer. |
 | **AI assistant integration (MCP)** | Connect Spark to Claude, custom agents or any MCP-compatible assistant — learners can browse, enrol and track progress through chat |
 | **Custom theming, live from the UI** | Change colours, fonts and branding without a deployment. Try it on the sandbox, customise your own using the published guide |
 | **Security hardening** | Vulnerabilities in the platform core fixed, plus all findings from an independent penetration test on Knowlg and Portal resolved |
@@ -29,6 +29,10 @@ v1.0.1 is a drop-in upgrade from v1.0.0. No data migration, no API breakage, no 
 ***
 
 ## Smarter search
+
+{% hint style="warning" %}
+**Infrastructure change — Elasticsearch replaced by OpenSearch.** This release migrates the search backend from Elasticsearch to OpenSearch. The installer handles index migration automatically (existing ES index is read, embeddings are generated, and the new vector index is populated). Adopters running self-managed or cloud-managed Elasticsearch clusters should review the upgrade notes before proceeding.
+{% endhint %}
 
 Search is now powered by **OpenSearch** with semantic matching layered on top of keyword search. The platform understands what a learner means, not just the words they type — a query like _"how do I handle errors in Python"_ surfaces relevant programming content even if none of it uses that exact phrase. Existing content becomes more discoverable without any re-tagging.
 
@@ -71,6 +75,10 @@ Adopters subject to compliance requirements (ISO 27001, SOC 2, data protection r
 
 ## Predictable Kubernetes upgrades
 
+{% hint style="info" %}
+**First-time upgrade note:** If your current AKS cluster is not already on the pinned version, this upgrade will trigger a Kubernetes version change on both the control plane and worker node pools. Check the installer changelog for the exact pinned version before upgrading, and validate compatibility with any cluster-level customisations or extensions you have in place.
+{% endhint %}
+
 The AKS cluster is now configured with a **pinned Kubernetes version** instead of always defaulting to the latest available. Control plane and worker node pools upgrade to the same explicitly specified version, so platform upgrades no longer carry the risk of an unexpected Kubernetes version bump introducing breakage. Staging and production stay version-consistent.
 
 ***
@@ -84,7 +92,7 @@ Automated regression tests now cover the **anonymous learner journey** — the f
 ## Upgrade notes
 
 {% hint style="info" %}
-Upgrading from v1.0.0 requires no data migration or API changes. Pull the new installer tag and re-run the deployment.
+Upgrading from v1.0.0 requires no API changes. The search index migration (ES → OpenSearch) and Kubernetes version pin are both handled by the installer — pull the new installer tag and re-run the deployment.
 {% endhint %}
 
 ```bash

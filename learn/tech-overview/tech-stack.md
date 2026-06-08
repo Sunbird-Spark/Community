@@ -28,7 +28,7 @@
 | ---------------- | ----------------------------------------------------------- | ------------------------------------------------------- |
 | YugabyteDB       | Primary transactional database                              | Replaces Cassandra + PostgreSQL. CQL + YSQL compatible. |
 | Janus Graph      | Content graph — metadata and relationships                  | Replaces Neo4J                                          |
-| Elasticsearch    | Search indices — content discovery and facets               | Synced from Janus Graph via Flink                       |
+| OpenSearch       | Search indices — content discovery and facets               | Synced from Janus Graph via Flink                       |
 | Kafka            | Event streaming — telemetry, publish pipeline, certificates | Upgraded to v4.x                                        |
 | Redis (optional) | Caching — API responses, sessions, telemetry dedup          | Two instances: metadata and knowledge platform          |
 

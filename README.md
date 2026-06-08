@@ -2,7 +2,7 @@
 
 <p align="center">The official guide for Sunbird Spark — a free, open-source learning management platform for governments, enterprises, and non-profits. Deploy it, extend it, or migrate to it from Sunbird ED.</p>
 
-<p align="center"><strong>Version:</strong> Spark v1.0 (SB Ed 9.0) · <strong>Last updated:</strong> April 2026</p>
+<p align="center"><strong>Version:</strong> Spark v1.0.1 · <strong>Last updated:</strong> June 2026</p>
 
 <p align="center"><a href="quick-start/5-minute-overview.md" class="button primary">Get Started →</a> <a href="https://github.com/Sunbird-Spark" class="button secondary">View on GitHub →</a></p>
 

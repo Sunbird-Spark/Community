@@ -93,7 +93,7 @@ Spark gives you a fully functional platform with two consumer-facing application
 | Learning Apps          | Web portal and mobile app (Android)                         |
 | Asset Sourcing         | Crowdsource, contribute, and curate digital content         |
 | Organised Collections  | Courses, playlists, and digital textbooks                   |
-| Search and Discovery   | ElasticSearch-powered full-text and faceted search          |
+| Search and Discovery   | OpenSearch-powered full-text and faceted search             |
 | User Engagement        | Notifications, passbook, groups, discussion forums (add-on) |
 | Rich Content Formats   | PDF, video, H5P, EPUB, interactive (ECML), audio            |
 | Question Bank          | QuML-based assessments, quizzes, surveys, and observations  |
