@@ -1,7 +1,8 @@
 ---
 description: >-
-  Minor release on top of Spark v1.0. Adds semantic search, AI assistant
-  integration, live theme switching, security fixes and operational improvements.
+  This minor release builds on Spark v1.0.0 with the addition of Semantic/AI
+  search, MCP tool support, and custom theme options, along with security fixes
+  and operational improvements.
 icon: bolt
 ---
 
@@ -17,14 +18,14 @@ v1.0.1 is a drop-in upgrade from v1.0.0. No API breakage, no mandatory configura
 
 ## What's in this release
 
-| Capability | What it does for you |
-| ---------- | -------------------- |
+| Capability                                               | What it does for you                                                                                                                |
+| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | **Smarter search** _(OpenSearch replaces Elasticsearch)_ | Learners find the right content even when they don't know the exact title. Search index is migrated automatically by the installer. |
-| **AI assistant integration (MCP)** | Connect Spark to Claude, custom agents or any MCP-compatible assistant — learners can browse, enrol and track progress through chat |
-| **Custom theming, live from the UI** | Change colours, fonts and branding without a deployment. Try it on the sandbox, customise your own using the published guide |
-| **Security hardening** | Vulnerabilities in the platform core fixed, plus all findings from an independent penetration test on Knowlg and Portal resolved |
-| **Predictable Kubernetes upgrades** | No more surprise version bumps — cluster versions are now pinned and explicitly controlled |
-| **Automated tests for guest learner flows** | Search, content discovery and player launch for unauthenticated users covered by regression tests |
+| **AI assistant integration (MCP)**                       | Connect Spark to Claude, custom agents or any MCP-compatible assistant — learners can browse, enrol and track progress through chat |
+| **Custom theming**                                       | Change colours, fonts and branding without a deployment. Try it on the sandbox, customise your own using the published guide        |
+| **Security hardening**                                   | Vulnerabilities in the platform core fixed, plus all findings from an independent penetration test on Knowlg and Portal resolved    |
+| **Predictable Kubernetes upgrades**                      | No more surprise version bumps — cluster versions are now pinned and explicitly controlled                                          |
+| **Automated tests for guest learner flows**              | Search, content discovery and player launch for unauthenticated users covered by regression tests                                   |
 
 ***
 
