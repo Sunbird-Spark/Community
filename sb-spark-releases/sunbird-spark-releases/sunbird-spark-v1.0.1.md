@@ -13,7 +13,7 @@ icon: bolt
 **Installer tag:** [`spark-v1.0.1`](https://github.com/Sunbird-Spark/sunbird-spark-installer/releases/tag/spark-v1.0.1)
 
 {% hint style="success" %}
-v1.0.1 is a drop-in upgrade from v1.0.0. No API breakage, no mandatory configuration changes. The search index migration (Elasticsearch → OpenSearch) and Kubernetes version pin are handled automatically by the installer.
+v1.0.1 is a drop-in upgrade from v1.0.0. No API breakage, no mandatory configuration changes. The search index migration (Elasticsearch 7.10 → OpenSearch) and Kubernetes version pin are handled automatically by the installer.
 {% endhint %}
 
 ## What's in this release
@@ -43,7 +43,7 @@ Search is now powered by **OpenSearch** with semantic matching layered on top of
 
 ## AI assistant integration (MCP)
 
-Spark now exposes its content catalogue, learning paths, enrolments and assessments through the **Model Context Protocol (MCP)**. Any MCP-compatible AI assistant — Claude, custom agents, or internal tools your organisation builds — can interact with the platform conversationally. Anonymous tools work without credentials; authenticated tools use a device-code login flow so learners can sign in without leaving the assistant.
+Spark now exposes its content catalogue, learning paths, enrolments and assessments through the **Model Context Protocol (MCP)**. Any MCP-compatible AI assistant — Claude, custom agents, or internal tools your organisation builds — can interact with the platform conversationally. Anonymous tools work without credentials; authenticated tools generate a login link for learners to sign in and seamlessly continue their AI-assisted learning experience..
 
 [GitHub repository — sunbird-mcp →](https://github.com/Sunbird-Spark/sunbird-mcp)
 
@@ -93,7 +93,7 @@ Automated regression tests now cover the **anonymous learner journey** — the f
 ## Upgrade notes
 
 {% hint style="info" %}
-Upgrading from v1.0.0 requires no API changes. The search index migration (ES → OpenSearch) and Kubernetes version pin are both handled by the installer — pull the new installer tag and re-run the deployment.
+Upgrading from v1.0.0 requires no API changes. The search index migration (ES 7.10 → OpenSearch) and Kubernetes version pin are both handled by the installer — pull the new installer tag and re-run the deployment.
 {% endhint %}
 
 ```bash
