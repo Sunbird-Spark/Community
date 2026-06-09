@@ -4,7 +4,7 @@
 
 Learners can discover content through:
 
-* **Full-text search** powered by Elasticsearch, across titles, descriptions, and content metadata
+* **Full-text search** powered by OpenSearch, across titles, descriptions, and content metadata
 * **Faceted filters** across framework dimensions such as subject, grade level, medium, and content type
 * **Curated sections** on the home page and explore page, such as Most Popular, Trending, Recently Added, and Recommended
 * **Personalised recommendations** on the home dashboard for logged-in learners, based on learning history

@@ -16,11 +16,11 @@ The content and knowledge management building block.
 * Content lifecycle management — create, review, publish, retire
 * Collection management — courses, playlists, textbooks, and their hierarchies
 * Taxonomy and framework management — configurable category trees for any domain
-* Content search and discovery — Elasticsearch-powered
+* Content search and discovery — OpenSearch-powered
 * Media management — cloud storage integration for content assets
 * Question bank — assessment content (inQuiry APIs are merged into knowlg-service in Spark)
 
-**Primary data stores:** Janus Graph(content graph), YugabyteDB (transactional data), Elasticsearch (search index), Redis (API response cache)
+**Primary data stores:** Janus Graph(content graph), YugabyteDB (transactional data), OpenSearch (search index), Redis (API response cache)
 
 **Deployed as:** knowlg-service (single merged service in Spark)
 {% endtab %}
