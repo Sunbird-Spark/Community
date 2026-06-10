@@ -102,7 +102,30 @@ cd sunbird-spark-installer
 git checkout spark-v1.0.1
 ```
 
-The OpenSearch migration is handled by the installer — the existing Elasticsearch index is read, embeddings are generated, and the new vector index is populated as part of the upgrade. Search continues to work throughout via the alias architecture.
+#### **OpenSearch migration**
+
+1. Reindexing is required when upgrading from a release that used **Elasticsearch < 7.10** directly.
+2. The OpenSearch migration is handled by the installer — the existing Elasticsearch index is read, embeddings are generated, and the new vector index is populated as part of the upgrade. Search continues to work throughout via the alias architecture.
+
+#### Certificate keys
+
+{% hint style="info" %}
+Reuse the existing certificate public key and certificate sign key from the old cluster. Do not regenerate them.
+{% endhint %}
+
+#### JWT key regeneration
+
+1. Uncomment lines 22–26 in [keys/main.tf#L22](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/opentofu/azure/modules/keys/main.tf#L22)
+2. Run `terragrunt apply`.
+3. Re-comment the same lines.
+
+#### Certificate verification fix
+
+If certificate verification fails, update the `certContextOrigins` system setting:
+
+{% hint style="info" %}
+Load the appropriate `env.json`, then run **Learn 35 - System Settings - certContextOrigins API** from the [Spark Postman collection](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/postman-collection/sunbird-spark-collection-v1.json).
+{% endhint %}
 
 ***
 
