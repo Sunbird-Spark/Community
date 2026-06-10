@@ -1,34 +1,25 @@
----
-description: >-
-  This minor release builds on Spark v1.0.0 with the addition of Semantic/AI
-  search, MCP tool support, and custom theme options, along with security fixes
-  and operational improvements.
----
-
 # Sunbird Spark v1.0.1
 
-Here's the full file:
+**Released:** 8 June 2026 \
+**Release type:** Minor — backward compatible with v1.0.0 \
+**Installer tag:** [`spark-v1.0.1`](https://github.com/Sunbird-Spark/sunbird-spark-installer/releases/tag/spark-v1.0.1)
 
-***
-
-### Sunbird Spark v1.0.1 — Release Notes
-
-**Released:** 8 June 2026 **Release type:** Minor — backward compatible with v1.0.0 **Installer tag:** `spark-v1.0.1`
-
+{% hint style="info" %}
 v1.0.1 is a drop-in upgrade from v1.0.0. No API breakage, no mandatory configuration changes. The Kubernetes version pin is handled automatically by the installer. The search index migration (Elasticsearch 7.10 → OpenSearch) requires following the migration guide below.
+{% endhint %}
 
 ***
 
-#### What's New
+### What's in this release
 
-| Feature                        | Summary                                                                          |
-| ------------------------------ | -------------------------------------------------------------------------------- |
-| Semantic Search                | OpenSearch replaces Elasticsearch; understands learner intent, not just keywords |
-| MCP Tool Support               | Connect Claude, custom agents, or any MCP-compatible assistant to Spark          |
-| Custom Theming                 | Change colours, fonts, and branding from the UI — no deployment required         |
-| Security Hardening             | RC-Core vulnerabilities fixed; all penetration test findings resolved            |
-| Kubernetes Version Pinning     | AKS cluster version is now explicitly pinned, preventing unexpected upgrades     |
-| Guest Learner Regression Tests | Automated coverage for the full anonymous learner journey                        |
+| Capability                                               | What it does for you                                                                                                                |
+| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Smarter search** _(OpenSearch replaces Elasticsearch)_ | Learners find the right content even when they don't know the exact title. Search index is migrated automatically by the installer. |
+| **AI assistant integration (MCP)**                       | Connect Spark to Claude, custom agents or any MCP-compatible assistant — learners can browse, enrol and track progress through chat |
+| **Custom theming**                                       | Change colours, fonts and branding without a deployment. Try it on the sandbox, customise your own using the published guide        |
+| **Security hardening**                                   | Vulnerabilities in the platform core fixed, plus all findings from an independent penetration test on Knowlg and Portal resolved    |
+| **Predictable Kubernetes upgrades**                      | No more surprise version bumps — cluster versions are now pinned and explicitly controlled                                          |
+| **Automated tests for guest learner flows**              | Search, content discovery and player launch for unauthenticated users covered by regression tests                                   |
 
 ***
 
@@ -36,11 +27,9 @@ v1.0.1 is a drop-in upgrade from v1.0.0. No API breakage, no mandatory configura
 
 **Semantic Search (OpenSearch)**
 
-Spark's search backend has migrated from Elasticsearch to OpenSearch, with semantic matching layered on top of keyword search. The platform now understands learner intent rather than matching exact keywords. A query like _"how do I handle errors in Python"_ surfaces relevant programming content even when none of the content uses that exact phrase. Existing content becomes more discoverable without any re-tagging.
+\{% hint style="warning" %\} **Infrastructure change — Elasticsearch replaced by OpenSearch.** This release migrates the search backend from Elasticsearch to OpenSearch. The installer handles index migration automatically (existing ES index is read, embeddings are generated, and the new vector index is populated). Adopters running self-managed or cloud-managed Elasticsearch clusters should review the upgrade notes before proceeding. \{% endhint %\}
 
-> **Note:** Adopters running self-managed or cloud-managed Elasticsearch clusters should review the migration guide before proceeding.
-
-High-level design document →
+Search is now powered by **OpenSearch** with semantic matching layered on top of keyword search. The platform understands what a learner means, not just the words they type — a query like _"how do I handle errors in Python"_ surfaces relevant programming content even if none of it uses that exact phrase. Existing content becomes more discoverable without any re-tagging.
 
 ***
 
