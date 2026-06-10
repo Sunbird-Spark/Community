@@ -104,8 +104,8 @@ git checkout spark-v1.0.1
 
 #### **OpenSearch migration**
 
-1. Reindexing is required when upgrading from a release that used **Elasticsearch < 7.10** directly.
-2. The OpenSearch migration is handled by the installer — the existing Elasticsearch index is read, embeddings are generated, and the new vector index is populated as part of the upgrade. Search continues to work throughout via the alias architecture.
+1. Reindexing is required if you're upgrading from a version that used Elasticsearch earlier than **7.10**. For details, see the [upgrade notes](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/helmcharts/learnbb/files/migration/README.md).
+2. The installer automatically handles the migration to OpenSearch during the upgrade. It reads data from the existing Elasticsearch index, generates embeddings, and populates the new vector index. Thanks to the alias-based architecture, search remains available and continues to work throughout the migration process.
 
 #### Certificate keys
 
@@ -119,13 +119,7 @@ Reuse the existing certificate public key and certificate sign key from the old 
 2. Run `terragrunt apply`.
 3. Re-comment the same lines.
 
-#### Certificate verification fix
 
-If certificate verification fails, update the `certContextOrigins` system setting:
-
-{% hint style="info" %}
-Load the appropriate `env.json`, then run **Learn 35 - System Settings - certContextOrigins API** from the [Spark Postman collection](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/postman-collection/sunbird-spark-collection-v1.json).
-{% endhint %}
 
 ***
 
