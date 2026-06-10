@@ -39,7 +39,7 @@ Search is now powered by **OpenSearch** with semantic matching layered on top of
 
 #### AI assistant integration (MCP)
 
-Spark now exposes its content catalogue, learning paths, enrolments and assessments through the **Model Context Protocol (MCP)**. Any MCP-compatible AI assistant — Claude, custom agents, or internal tools your organisation builds — can interact with the platform conversationally. Anonymous tools work without credentials; authenticated tools generate a login link for learners to sign in and seamlessly continue their AI-assisted learning experience..
+Spark now exposes its content catalogue, learning paths, enrolments and assessments through the **Model Context Protocol (MCP)**. Any MCP-compatible AI assistant — Claude, custom agents, or internal tools your organisation builds — can interact with the platform conversationally. Anonymous tools work without credentials; authenticated tools generate a login link for learners to sign in and seamlessly continue their AI-assisted learning experience.
 
 [GitHub repository — sunbird-mcp →](https://github.com/Sunbird-Spark/sunbird-mcp)
 
@@ -80,25 +80,23 @@ Automated regression tests now cover the **anonymous learner journey** — the f
 
 ### Upgrade Guide
 
-#### **Upgrading from v1.0.0**
+#### Upgrading from v1.0.0
 
 No API changes are required. Follow the steps below in order.
 
-**Step 1 — Take an Elasticsearch Backup**
+#### Step 1 — Take an Elasticsearch Backup
 
 Before doing anything else, take a full Elasticsearch backup.
 
 [Elasticsearch backup guide →](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/helmcharts/learnbb/files/migration/README.md)
 
-**Step 2 — Check and Plan Your Kubernetes Version Upgrade**
+#### Step 2 — Check and Plan Your Kubernetes Version Upgrade
 
 > **Important:** Kubernetes versions cannot be skipped. You must upgrade one minor version at a time. Check your current cluster version and plan the full upgrade path before proceeding.
 
-[Kubernetes upgrade](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/opentofu/azure/README.md#aks-kubernetes-version-upgrade)  →
+[Kubernetes upgrade →](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/opentofu/azure/README.md#aks-kubernetes-version-upgrade)
 
-**Step 3 —**&#x52;un the Installer
-
-bash
+#### Step 3 — Run the Installer
 
 ```bash
 git clone https://github.com/Sunbird-Spark/sunbird-spark-installer.git
@@ -106,9 +104,9 @@ cd sunbird-spark-installer
 git checkout spark-v1.0.1
 ```
 
-Follow the installer guide to complete infrastructure provisioning and service deploymentfollow this link to how to do [sunbird-spark-installer-guide](../../use/getting-started/one-click-installer.md)
+Follow the [installer guide](../../use/getting-started/one-click-installer.md) to complete infrastructure provisioning and service deployment.
 
-**Step 4 — Run the OpenSearch Migration**
+#### Step 4 — Run the OpenSearch Migration
 
 Once all services are up, run the search index migration from Elasticsearch 7.10 to OpenSearch.
 
@@ -118,7 +116,7 @@ Once all services are up, run the search index migration from Elasticsearch 7.10
 
 Link to Release Tag: [https://github.com/Sunbird-Spark/sunbird-spark-installer/releases/tag/spark-v1.0.1](https://github.com/Sunbird-Spark/sunbird-spark-installer/releases/tag/spark-v1.0.1)
 
-**JWT Key Regeneration**
+#### JWT Key Regeneration
 
 > **Required:** When upgrading from Spark v1.0.0, JWT keys must be regenerated.
 
@@ -128,7 +126,7 @@ Link to Release Tag: [https://github.com/Sunbird-Spark/sunbird-spark-installer/r
 
 **Why this matters:** Kong acts as the API gateway — every request must carry a JWT with a `kid` (key ID) in the header. Kong uses that `kid` to look up the matching credential, verify the signature, identify the caller type (portal anonymous, portal authenticated, or mobile), and check route permissions.
 
-**Notes**
+#### Notes
 
 > **Certificate keys on infrastructure reuse:** Certificate and certificate-signing keys are not regenerated when using the same infrastructure and only updating services. These keys are retained as-is in the existing `global-values.yaml` file. Reuse the existing certificate public key and certificate signing key from the old cluster. Do not regenerate them.
 
