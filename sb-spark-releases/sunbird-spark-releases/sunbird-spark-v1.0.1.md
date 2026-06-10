@@ -23,81 +23,66 @@ v1.0.1 is a drop-in upgrade from v1.0.0. No API breakage, no mandatory configura
 
 ***
 
-#### Feature Details
+### Feature Details
 
-**Semantic Search (OpenSearch)**
+#### Smarter search
 
-\{% hint style="warning" %\} **Infrastructure change — Elasticsearch replaced by OpenSearch.** This release migrates the search backend from Elasticsearch to OpenSearch. The installer handles index migration automatically (existing ES index is read, embeddings are generated, and the new vector index is populated). Adopters running self-managed or cloud-managed Elasticsearch clusters should review the upgrade notes before proceeding. \{% endhint %\}
+{% hint style="warning" %}
+**Infrastructure change — Elasticsearch replaced by OpenSearch.** This release migrates the search backend from Elasticsearch to OpenSearch. The installer handles index migration automatically (existing ES index is read, embeddings are generated, and the new vector index is populated). Adopters running self-managed or cloud-managed Elasticsearch clusters should review the upgrade notes before proceeding.
+{% endhint %}
 
 Search is now powered by **OpenSearch** with semantic matching layered on top of keyword search. The platform understands what a learner means, not just the words they type — a query like _"how do I handle errors in Python"_ surfaces relevant programming content even if none of it uses that exact phrase. Existing content becomes more discoverable without any re-tagging.
 
-***
-
-**AI Assistant Integration (MCP)**
-
-Spark now exposes its content catalogue, learning paths, enrolments, and assessments through the **Model Context Protocol (MCP)**. Any MCP-compatible assistant — Claude, custom agents, or internal tools your organisation builds — can interact with the platform conversationally.
-
-* **Anonymous tools** work without credentials
-* **Authenticated tools** generate a login link so learners can sign in and seamlessly continue their AI-assisted learning session
-
-[GitHub: sunbird-mcp →](https://github.com/Sunbird-Spark/sunbird-mcp)
+[High-level design document →](https://docs.google.com/document/d/1LtDnhFfW9VLbhX9pY4W9XbA8FNBh2uFhVEfNXojzE3g/edit)
 
 ***
 
-**Custom Theming**
+#### AI assistant integration (MCP)
 
-Administrators can switch themes directly from the portal UI — no code, no deployment, no developer required. Multi-tenant platforms can apply different visual experiences per programme or audience, and campaign or partnership branding can go live instantly.
+Spark now exposes its content catalogue, learning paths, enrolments and assessments through the **Model Context Protocol (MCP)**. Any MCP-compatible AI assistant — Claude, custom agents, or internal tools your organisation builds — can interact with the platform conversationally. Anonymous tools work without credentials; authenticated tools generate a login link for learners to sign in and seamlessly continue their AI-assisted learning experience..
 
-Try it live on the sandbox: [sandbox.sunbirded.org](https://sandbox.sunbirded.org/)
-
-Portal theming guide →
+[GitHub repository — sunbird-mcp →](https://github.com/Sunbird-Spark/sunbird-mcp)
 
 ***
 
-**Security Hardening**
+#### Custom theming, live from the UI
 
-Two security workstreams were completed in this release.
+Administrators can switch themes directly from the UI — no code, no deployment, no developer needed. Multi-tenant platforms can swap visual experiences per programme or audience, and branding for campaigns or partnerships can go live instantly.
 
-**1. RC-Core Vulnerability Assessment**
+**Try it:** the new theme is enabled on our sandbox so you can experience it end to end.
 
-A structured assessment was run across RC-Core. All identified critical and high-severity vulnerabilities have been remediated and re-validated in the latest scan.
+{% hint style="info" %}
+**Sandbox:** [https://sandbox.sunbirded.org/](https://sandbox.sunbirded.org/)\
+**Build your own theme** (colours, fonts, branding): [Portal theming guide →](https://github.com/Sunbird-Spark/sunbird-spark-portal#theming-system)
+{% endhint %}
 
-**2. Shannon AI Penetration Test — Knowlg and Portal**
+#### Security hardening
 
-All findings from an externally conducted penetration test on Knowlg and Portal were reviewed and resolved. There are no accepted risks or deferred items.
+Two security workstreams completed this release.
 
-> Adopters subject to compliance requirements (ISO 27001, SOC 2, data protection regulations) can reference these workstreams in due-diligence documentation.
+**RC-Core vulnerability assessment.** A structured assessment was run across RC-Core. All identified critical and high-severity vulnerabilities have been remediated and re-validated in the latest scan.
 
-***
+**Shannon AI penetration test (Knowlg and Portal).** All findings from an externally conducted penetration test on Knowlg and Portal were reviewed and resolved in this sprint, with no accepted risk or deferred items.
 
-**Kubernetes Version Pinning**
+Adopters subject to compliance requirements (ISO 27001, SOC 2, data protection regulations) can reference these workstreams in due diligence.
 
-The AKS cluster is now configured with a pinned Kubernetes version instead of always defaulting to the latest available. Control plane and worker node pools upgrade to the same explicitly specified version, ensuring staging and production remain version-consistent.
+#### Predictable Kubernetes upgrades
 
-> **Note:** Kubernetes versions cannot be skipped. You must upgrade one minor version at a time. If your current AKS cluster is not already on the pinned version, plan your upgrade path incrementally before proceeding. Validate compatibility with any cluster-level customisations or extensions you have in place.
+{% hint style="info" %}
+**First-time upgrade note:** If your current AKS cluster is not already on the pinned version, this upgrade will trigger a Kubernetes version change on both the control plane and worker node pools. Check the installer changelog for the exact pinned version before upgrading, and validate compatibility with any cluster-level customisations or extensions you have in place.
+{% endhint %}
 
-***
+The AKS cluster is now configured with a **pinned Kubernetes version** instead of always defaulting to the latest available. Control plane and worker node pools upgrade to the same explicitly specified version, so platform upgrades no longer carry the risk of an unexpected Kubernetes version bump introducing breakage. Staging and production stay version-consistent.
 
-**Automated Tests — Guest Learner Flows**
+#### Automated tests for guest learner flows
 
-Automated regression tests now cover the full anonymous learner journey. Coverage includes:
+Automated regression tests now cover the **anonymous learner journey** — the first experience a new learner has with the platform. Coverage includes content discovery, search, course detail pages and player launch for unauthenticated users. Regressions in these flows are now caught before they reach production.
 
-* Content discovery
-* Search
-* Course detail pages
-* Player launch for unauthenticated users
+### Upgrade Guide
 
-Regressions in these flows are caught before they reach production.
-
-***
-
-#### Upgrade Guide
-
-**Upgrading from v1.0.0**
+#### **Upgrading from v1.0.0**
 
 No API changes are required. Follow the steps below in order.
-
-***
 
 **Step 1 — Take an Elasticsearch Backup**
 
@@ -105,15 +90,11 @@ Before doing anything else, take a full Elasticsearch backup.
 
 [Elasticsearch backup guide →](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/helmcharts/learnbb/files/migration/README.md)
 
-***
-
 **Step 2 — Check and Plan Your Kubernetes Version Upgrade**
 
 > **Important:** Kubernetes versions cannot be skipped. You must upgrade one minor version at a time. Check your current cluster version and plan the full upgrade path before proceeding.
 
 [Kubernetes upgrade](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/opentofu/azure/README.md#aks-kubernetes-version-upgrade)  →
-
-***
 
 **Step 3 —**&#x52;un the Installer
 
@@ -127,8 +108,6 @@ git checkout spark-v1.0.1
 
 Follow the installer guide to complete infrastructure provisioning and service deploymentfollow this link to how to do [sunbird-spark-installer-guide](../../use/getting-started/one-click-installer.md)
 
-***
-
 **Step 4 — Run the OpenSearch Migration**
 
 Once all services are up, run the search index migration from Elasticsearch 7.10 to OpenSearch.
@@ -138,8 +117,6 @@ Once all services are up, run the search index migration from Elasticsearch 7.10
 [OpenSearch Migration Guide →](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/helmcharts/learnbb/files/migration/README.md#step-2--elasticsearch-down-opensearch-up)
 
 Link to Release Tag: [https://github.com/Sunbird-Spark/sunbird-spark-installer/releases/tag/spark-v1.0.1](https://github.com/Sunbird-Spark/sunbird-spark-installer/releases/tag/spark-v1.0.1)
-
-***
 
 **JWT Key Regeneration**
 
