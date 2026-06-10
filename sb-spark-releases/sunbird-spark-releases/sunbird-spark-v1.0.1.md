@@ -1,7 +1,7 @@
 # Sunbird Spark v1.0.1
 
-**Released:** 8 June 2026 \
-**Release type:** Minor — backward compatible with v1.0.0 \
+**Released:** 8 June 2026\
+**Release type:** Minor — backward compatible with v1.0.0\
 **Installer tag:** [`spark-v1.0.1`](https://github.com/Sunbird-Spark/sunbird-spark-installer/releases/tag/spark-v1.0.1)
 
 {% hint style="info" %}
@@ -120,7 +120,7 @@ Link to Release Tag: [https://github.com/Sunbird-Spark/sunbird-spark-installer/r
 
 > **Required:** When upgrading from Spark v1.0.0, JWT keys must be regenerated.
 
-1. Uncomment the relevant line in the keys module — find the path here →
+1. Uncomment the relevant line in the keys module — find the path here → [https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/opentofu/azure/modules/keys/main.tf#L24](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/opentofu/azure/modules/keys/main.tf#L24)
 2. Run the installer
 3. Comment the line back in — leaving it uncommented will cause keys to be regenerated on every subsequent run
 
