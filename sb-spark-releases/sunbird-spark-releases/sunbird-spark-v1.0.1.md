@@ -56,6 +56,8 @@ Administrators can switch themes directly from the UI — no code, no deployment
 **Build your own theme** (colours, fonts, branding): [Portal theming guide →](https://github.com/Sunbird-Spark/sunbird-spark-portal#theming-system)
 {% endhint %}
 
+***
+
 #### Security hardening
 
 Two security workstreams completed this release.
@@ -66,6 +68,8 @@ Two security workstreams completed this release.
 
 Adopters subject to compliance requirements (ISO 27001, SOC 2, data protection regulations) can reference these workstreams in due diligence.
 
+***
+
 #### Predictable Kubernetes upgrades
 
 {% hint style="info" %}
@@ -74,9 +78,13 @@ Adopters subject to compliance requirements (ISO 27001, SOC 2, data protection r
 
 The AKS cluster is now configured with a **pinned Kubernetes version** instead of always defaulting to the latest available. Control plane and worker node pools upgrade to the same explicitly specified version, so platform upgrades no longer carry the risk of an unexpected Kubernetes version bump introducing breakage. Staging and production stay version-consistent.
 
+***
+
 #### Automated tests for guest learner flows
 
 Automated regression tests now cover the **anonymous learner journey** — the first experience a new learner has with the platform. Coverage includes content discovery, search, course detail pages and player launch for unauthenticated users. Regressions in these flows are now caught before they reach production.
+
+***
 
 ### Upgrade Guide
 
