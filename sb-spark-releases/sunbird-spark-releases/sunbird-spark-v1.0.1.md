@@ -67,13 +67,7 @@ Administrators can switch themes directly from the UI — no code, no deployment
 
 #### Security hardening
 
-Two security workstreams completed this release.
-
-**RC-Core vulnerability assessment.** A structured assessment was run across RC-Core. All identified critical and high-severity vulnerabilities have been remediated and re-validated in the latest scan.
-
 **Shannon AI penetration test (Knowlg and Portal).** All findings from an externally conducted penetration test on Knowlg and Portal were reviewed and resolved in this sprint, with no accepted risk or deferred items.
-
-Adopters subject to compliance requirements (ISO 27001, SOC 2, data protection regulations) can reference these workstreams in due diligence.
 
 ***
 
