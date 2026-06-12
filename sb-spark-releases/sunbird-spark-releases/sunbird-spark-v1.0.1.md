@@ -15,6 +15,7 @@ v1.0.1 is a drop-in upgrade from v1.0.0. No API breakage, no mandatory configura
 | Capability                                               | What it does for you                                                                                                                |
 | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | **Smarter search** _(OpenSearch replaces Elasticsearch)_ | Learners find the right content even when they don't know the exact title. Search index is migrated automatically by the installer. |
+| **SCROM Content Support**                                | Creators can upload existing or newly created SCORM zip packages — they play in Spark like any other content                        |
 | **AI assistant integration (MCP)**                       | Connect Spark to Claude, custom agents or any MCP-compatible assistant — learners can browse, enrol and track progress through chat |
 | **Custom theming**                                       | Change colours, fonts and branding without a deployment. Try it on the sandbox, customise your own using the published guide        |
 | **Security hardening**                                   | Vulnerabilities in the platform core fixed, plus all findings from an independent penetration test on Knowlg and Portal resolved    |
@@ -34,6 +35,12 @@ v1.0.1 is a drop-in upgrade from v1.0.0. No API breakage, no mandatory configura
 Search is now powered by **OpenSearch** with semantic matching layered on top of keyword search. The platform understands what a learner means, not just the words they type — a query like _"how do I handle errors in Python"_ surfaces relevant programming content even if none of it uses that exact phrase. Existing content becomes more discoverable without any re-tagging.
 
 [High-level design document →](https://docs.google.com/document/d/1LtDnhFfW9VLbhX9pY4W9XbA8FNBh2uFhVEfNXojzE3g/edit)
+
+***
+
+#### SCORM content support
+
+Spark now supports SCORM packages as first-class content. Creators can upload existing or newly created SCORM zip files through the standard content workflow, and learners launch them in the player like any other content type — progress and completion are tracked back to the platform. Existing SCORM libraries can be brought onto Spark without re-authoring or conversion.
 
 ***
 
