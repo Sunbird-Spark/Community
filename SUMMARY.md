@@ -71,6 +71,7 @@
 ## SB SPARK RELEASES
 
 * [Sunbird Spark releases](sb-spark-releases/sunbird-spark-releases/README.md)
+  * [Sunbird Spark v1.0.2](sb-spark-releases/sunbird-spark-releases/sunbird-spark-v1.0.2.md)
   * [Sunbird Spark v1.0.1](sb-spark-releases/sunbird-spark-releases/sunbird-spark-v1.0.1.md)
   * [Sunbird Spark v1.0.0](sb-spark-releases/sunbird-spark-releases/sunbird-spark-v1.0-sb-9.0.md)
   * [Sunbird ED 8.1.0 — archived reference](sb-spark-releases/sunbird-spark-releases/sunbird-ed-8.1.0-archived-reference.md)
