@@ -12,7 +12,7 @@ v1.1.0 upgrades cleanly from v1.0.2. This release delivers AI-powered captioning
 
 ### Overview
 
-<table><thead><tr><th width="40">#</th><th width="274">Major Feature</th><th>Summary</th></tr></thead><tbody><tr><td>1</td><td>AI-Powered Auto Captions &#x26; Video Transcripts (v1)</td><td>Automatic caption generation and video transcripts integrated into the Sunbird Video Player, with multilingual caption support across the web and mobile applications</td></tr><tr><td>2</td><td>Viewer Service — Learning Paths (Backend APIs)</td><td>Backend APIs for structured learning programs — ordered Levels bundling Courses and Practice Question Sets, tracked and certified as a single journey, with adaptive skip (waive) via an entry diagnostic. Backend APIs only; no UI in this release</td></tr><tr><td>3</td><td>QuML Editor &#x26; Player Stability</td><td>Editor/Player defects resolved and assessment consumption in SCORM content fixed</td></tr><tr><td>4</td><td>QTI Support (Proof of Concept)</td><td>QTI support plan and design completed, with an initial QTI Player proof of concept</td></tr><tr><td>5</td><td>Security &#x26; Infrastructure Hardening</td><td>Docker Hardened Images (DHI) rolled out as the base image across existing services for a smaller, more secure runtime footprint</td></tr></tbody></table>
+<table><thead><tr><th width="40">#</th><th width="274">Major Feature</th><th>Summary</th></tr></thead><tbody><tr><td>1</td><td>AI-Powered Auto Captions &#x26; Video Transcripts (v1)</td><td>Automatic caption generation and video transcripts integrated into the Sunbird Video Player, with multilingual caption support across the web and mobile applications</td></tr><tr><td>2</td><td>Viewer Service — Learning Paths (Backend APIs)</td><td>Backend APIs for structured learning programs — ordered Levels bundling Courses and Practice Question Sets, tracked and certified as a single journey, with adaptive skip (waive) via an entry diagnostic. Backend APIs only; no UI in this release</td></tr><tr><td>3</td><td>QuML Editor &#x26; Player Stability</td><td>Editor/Player defects resolved and assessment consumption in SCORM content fixed</td></tr><tr><td>4</td><td>QTI Support (Proof of Concept)</td><td>QTI support plan and design completed, with an initial QTI Player proof of concept</td></tr><tr><td>5</td><td>Security &#x26; Infrastructure Hardening</td><td>Docker Hardened Images (DHI) rolled out as the base image across existing services for a smaller, more secure runtime footprint</td></tr><tr><td></td><td><strong>Private cluster access via VPN or Azure Bastion</strong> </td><td>Added support for fully private AKS clusters with no public IP exposure. Developer/CI access is now configurable</td></tr></tbody></table>
 
 ***
 
@@ -64,11 +64,13 @@ The **QTI support** plan and design are completed, along with an initial **QTI P
 
 **Docker Hardened Images (DHI)** Service base images are migrated to **Docker Hardened Images (DHI)** across existing services, replacing the previous Node base images with hardened, minimal `dhi.io` images. This reduces the container attack surface and image footprint and standardizes the runtime across services.
 
+**Private cluster access via VPN or Azure Bastion** — Added support for fully private AKS clusters with no public IP exposure. Developer/CI access is now configurable via `vpn_enabled` in `global-values.yaml`: set to `true` for Pritunl VPN + WireGuard (self-hosted, VM gets a public IP just for the VPN endpoint), or `false` for Azure Bastion (browser-based SSH through the Azure Portal, no VPN client, no public IP on the VM at all)
+
 ***
 
 ### Bug Fixes
 
-<table><thead><tr><th width="160">Area</th><th>Fix</th></tr></thead><tbody><tr><td>QuML Editor</td><td>Editor/Player defects resolved (authoring and playback stability)</td></tr><tr><td>QuML Player</td><td>Editor/Player defects resolved (authoring and playback stability)</td></tr><tr><td>Assessment / SCORM</td><td>Assessment consumption in SCORM content corrected — implemented, deployed, and verified</td></tr><tr><td>Portal</td><td>Portal defects resolved</td></tr></tbody></table>
+<table><thead><tr><th width="160">Area</th><th>Fix</th></tr></thead><tbody><tr><td>QuML Editor</td><td>Editor/Player defects resolved (authoring and playback stability)</td></tr><tr><td>QuML Player</td><td>Editor/Player defects resolved (authoring and playback stability)</td></tr><tr><td>Assessment / SCORM</td><td>Assessment consumption in SCORM content corrected — implemented, deployed, and verified</td></tr><tr><td>Portal</td><td>Portal defects resolved</td></tr><tr><td></td><td></td></tr></tbody></table>
 
 ***
 
@@ -76,28 +78,16 @@ The **QTI support** plan and design are completed, along with an initial **QTI P
 
 #### Upgrading from v1.0.2
 
-Follow the steps below in order.
+Upgrading from **v1.0.2** to this release introduces a **private cluster** instead of a public cluster.
 
-**Step 1 — Take a Database Backup** Take a full database backup before proceeding, as you would for any release.
+Please follow the steps below in order:
 
-**Step 2 — Run the Installer**
+**Step 1 — Migration**\
+Follow the migration steps in the [Velero Migration Guide](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/migration/RELEASE-MIGRATION.md#1-standard-upgrade-velero-backup--restore)
 
-```bash
-git clone https://github.com/Sunbird-Spark/sunbird-spark-installer.git
-cd sunbird-spark-installer
-git checkout spark-v1.1.0
-```
+**View Service Migration**\
+Follow the steps in the [View Service Migration Guide](https://github.com/Sunbird-Spark/sunbird-spark-installer/blob/main/migration/RELEASE-MIGRATION.md#2-release-specific-migrations)
 
-Follow the installer guide to complete infrastructure provisioning and service deployment.
-
-**Step 3 — Run Pending Data Migrations**
-
-```bash
-./execute_migrations.sh
-```
-
-Migrations are idempotent — they check the schema before applying, so they are safe to re-run.
-
-**Step 4 — Deploy** Deploy the services as per the installer guide. DHI-based service images are pulled automatically as part of the standard deployment.
+**Step 3 — Deploy** Deploy the services as per the installer guide. DHI-based service images are pulled automatically as part of the standard deployment.
 
 **Link to Release Tag:** [spark-v1.1.0](https://github.com/Sunbird-Spark/sunbird-spark-installer/releases/tag/spark-v1.1.0)
