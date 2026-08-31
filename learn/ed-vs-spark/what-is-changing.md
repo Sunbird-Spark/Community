@@ -1,8 +1,6 @@
-# What is changing
+# What is changing?
 
 ### Functional / User Perspective
-
-
 
 * **Redesigned homepage** — clean hero banner, curated content shelves (Most Popular, Trending, Resource Centre), and category browsing, all accessible without logging in. The design, look, and feel are fully customisable per tenant.
 * **Personalised home dashboard** — greets you by name and displays Total Courses, In Progress, Completed, and Certifications Earned at a glance.
@@ -53,11 +51,11 @@
 **After:** Consolidated into two unified services.
 {% endhint %}
 
-| Before                               | After                        | Status |
-| ------------------------------------ | ---------------------------- | :----: |
-| taxonomy + content + knowlg + search | `knowlg-service`             | ✅ Done |
-| inQuiry APIs                         | Merged into `knowlg-service` | ✅ Done |
-| userorg-service + lms-service        | `lern-service`               | ✅ Done |
+| Before                        | After                        | Status |
+| ----------------------------- | ---------------------------- | :----: |
+| taxonomy + content + knowlg   | `knowlg-service`             | ✅ Done |
+| inQuiry APIs                  | Merged into `knowlg-service` | ✅ Done |
+| userorg-service + lms-service | `lern-service`               | ✅ Done |
 
 ***
 
@@ -167,7 +165,7 @@ A lean Spark installation ships with approximately 60% fewer running services th
 
 **8. Publish Pipeline Simplification**
 
-> **Before:** \
+> **Before:**\
 > Heavy async publish pipeline with multiple parallel jobs — ECAR generation, video streaming, and asset enrichment all running by default.
 
 > **After:**
@@ -181,7 +179,7 @@ A lean Spark installation ships with approximately 60% fewer running services th
 
 **9. Obsrv Decoupled — Basic Reports Built In**
 
-> **Before:** \
+> **Before:**\
 > Obsrv (Druid + Flink + Spark + Superset) was a mandatory dependency for any reporting capability.
 
 > **After:**
@@ -191,4 +189,3 @@ A lean Spark installation ships with approximately 60% fewer running services th
 > * Telemetry service is retained by default (events are still emitted)
 > * Kafka topic backup retained so Obsrv can be connected later
 > * Druid, Spark summarisers, and Superset are all disabled by default
-
