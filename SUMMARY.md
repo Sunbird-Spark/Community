@@ -83,6 +83,7 @@
 * [Sunbird Spark - Discussion Forum](engage/sunbird-spark-discussion-forum.md)
 * [Contribute to Sunbird Spark](engage/contribute-to-sunbird-spark.md)
 * [Extend and Contribute to Sunbird](engage/extend-and-contribute-to-sunbird.md)
+* [Sunbird Spark Partners](engage/sunbird-spark-partners.md)
 * [Issue Tracker](engage/issue-tracker.md)
 
 ## MISC
