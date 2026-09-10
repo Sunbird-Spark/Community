@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Upcoming
 
 * **VAPT** (Vulnerability Assessment and Penetration Testing) certification
@@ -12,4 +16,3 @@
 * **NL (natural language) web interface**
 
 [View full Jira roadmap →](https://project-sunbird.atlassian.net/jira/software/c/projects/SBCOSS/boards/135)
-

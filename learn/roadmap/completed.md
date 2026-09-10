@@ -1,8 +1,12 @@
+---
+hidden: true
+---
+
 # Completed
 
 > **Note:** Further simplification in progress.
 
-### Completed —&#x20;
+### Completed —
 
 **Cost Efficiency and Simplification**
 
